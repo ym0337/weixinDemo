@@ -1,0 +1,24 @@
+<text>天气情况</text>
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section">
+    <view class="section__title">输入城市名</view>
+    <input name="input" placeholder="please input here" />
+  </view>
+  <view class="btn-area">
+    <button formType="submit">Submit</button>
+  </view>
+</form>
+<view>
+  <text>城市:{{weatherData.city}}\n</text>
+  <text>温度:{{weatherData.temp}}\n</text>
+  <text>风向:{{weatherData.WD}}\n</text>
+  <text>风力:{{weatherData.WS}}\n</text>
+</view>

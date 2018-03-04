@@ -1,0 +1,18 @@
+<!--相对于html  -->
+<!--<view>相当于<div>的作用,容器  -->
+<!--只有在<text>里面的文字,在手机上面才能长按选中  -->
+
+<view class="container">
+  <!--图片是根目录下的  -->
+  <!--rpx跟px的区别,在iPhone6的750像素下为标准, 2rpx=1px ,rpx会根据设备变化而变化,px是固定的-->
+  <!-- <image style="width:200rpx;height:200rpx" src="/images/kingfa.png"></image> -->
+  <!--app.json 加载的时候把相关的文件(相同的名字开头)都导进去,所以不需要应用 wxss 也能有样式  -->
+  <image class="user-kingfa" src="/images/kingfa.png"></image>
+  <!--<text> 会把 /n 解析成换行符  -->
+  <text class="user-name"><text style="color:red;">hello!</text>kingF</text>
+  <!--事件前面要加上 bind 或者catch,如bind:tap,catch:tap  -->
+  <!--catch:tap 不冒泡,bind:tap冒泡  -->
+  <view class="moto-container" bind:tap="onTap">
+    <text class="moto">开始小程序之旅</text>
+  </view>
+</view>

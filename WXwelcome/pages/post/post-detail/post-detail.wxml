@@ -1,0 +1,20 @@
+<view>
+  <view style="positon:relative;">
+    <image class='post-detail-img' src="{{musicIsPlaying?postdata.music.coverImgUrl:postdata.img.post_img}}"></image>
+    <view class="{{musicIsPlaying?'audioPause':'audioPlaying'}}" catch:tap='onMusicTap'>{{musicIsPlaying?'pause':'play'}}</view>
+  </view>
+  <text class='post-detail-title'>{{postdata.title}}</text>
+  <view class='post-detail-name'>
+    <image class='post-detail-author' src='{{postdata.img.author_img}}'></image>
+    <text>{{postdata.author}}</text>
+    <text>发表于</text>
+    <text>{{postdata.datetime}}</text>
+  </view>
+  <view class='post-detail-icon'>
+    <view wx:if='{{collected}}' catch:tap='onCollectionTap' class='collection-icon1'>藏</view>
+    <view wx:else catch:tap='onCollectionTap' class='collection-icon2'>藏</view>
+    <view catch:tap='onShareTap' class='share-icon'>享</view>
+    <view class='middle-line'></view>
+  </view>
+  <text>{{postdata.detail}}</text>
+</view>

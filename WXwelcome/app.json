@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/post/post",
+    "pages/post/post-detail/post-detail",
+    "pages/movies/movies",
+    "pages/movies/more-movies/more-movies",
+    "pages/movies/movies-detail/movies-detial"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#995998",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "微信接口功能演示",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "selectedColor": "blue",
+    "position": "bottom",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/movies/movies",
+        "text": "电影",
+        "iconPath": "/images/icon/icon01.png",
+        "selectedIconPath": "/images/icon/icon02.png"
+      },
+      {
+        "pagePath": "pages/post/post",
+        "text": "文章",
+        "iconPath": "/images/icon/icon03.png",
+        "selectedIconPath": "/images/icon/icon04.png"
+      }
+    ]
+  }
+}

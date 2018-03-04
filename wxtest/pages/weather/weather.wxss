@@ -1,0 +1,5 @@
+/* pages/weather/weather.wxss */
+swiper-item image{
+  width: 750rpx;
+  height: 422rpx;
+}

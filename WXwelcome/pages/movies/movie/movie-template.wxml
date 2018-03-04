@@ -1,0 +1,15 @@
+<!--引入template模板文件  -->
+<import src="../stars/stars-template.wxml" />
+
+<template name="movieTemplate">
+<!--movieId要跟onMovieTap方法里的变量(var movieId=xxxx)相同才能设置成功  -->
+<!--data-movieid是dataset属性里面的一个movieid属性,因为是小程序原因,所以data-movieId的I会自动转换成i  -->
+  <view class="movie-container" catch:tap="onMovieTap" data-movieid="{{movieId}}">
+    <!--http://api.douban.com/v2/movie/subject/number(在豆瓣搜索之后,截取浏览器subject后面的数字替换number)  -->
+    <!-- <image class="movie-img" src="http://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2395733377.webp"></image> -->
+    <image class="movie-img" src="{{coverageUrl}}"></image>
+    <text class="movie-name">{{title}}</text>
+    <!--data="{{数据重新封装成js对象的形式传递,data只能传一个数据}}"  -->
+    <template is="starsTemplate" data="{{stars:stars,score:average}}" />
+  </view>
+</template>

@@ -1,0 +1,20 @@
+@import '../movie/movie-template.wxss';
+
+.movielist-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.movielist-more {
+  margin:24rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.movielist-item{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  width:700rpx;
+  margin:0 auto;
+}

@@ -1,0 +1,22 @@
+<!--引入template模板文件  -->
+<import src="../movie/movie-template.wxml" />
+
+<template name="movieListTemplate">
+  <view class="movielist-container">
+    <view class="movielist-more">
+      <view>
+        <text>{{titleBar}}</text>
+      </view>
+      <!--data-category用来判断点击了哪个专栏,console.log看看onMoreTap函数的event的属性,currentTarget  -->
+      <view catch:tap="onMoreTap" data-category="{{titleBar}}">
+        <text>更多</text>
+        <text>></text>
+      </view>
+    </view>
+    <view class="movielist-item">
+      <block wx:for="{{movies}}" wx:for-item="movie">
+        <template is="movieTemplate" data="{{...movie}}" />
+      </block>
+    </view>
+  </view>
+</template>

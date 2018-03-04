@@ -1,0 +1,11 @@
+<!--template 要有个name属性  -->
+<template name="postItem">
+  <view class="view-title">
+    <view>
+      <image wx:if="{{true}}" src="{{img.author_img}}" style="width:100rpx;height:100rpx"></image>
+      <text>{{date}} {{index}}</text>
+    </view>
+    <image src="{{img.post_img}}"></image>
+    <text>{{content}}</text>
+  </view>
+</template>

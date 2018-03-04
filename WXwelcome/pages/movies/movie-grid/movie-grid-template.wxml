@@ -1,0 +1,12 @@
+<import src="../movie/movie-template.wxml" />
+
+<template name="movieGridTemplate">
+  <!--scroll-view标签必须指定一个高度,官方文档有说明  -->
+  <scroll-view class="grid-container" scroll-y="true" scroll-x="false" bindscrolltolower="onScrollLower">
+    <block wx:for="{{movies}}" wx:for-item="movie">
+      <view class="singe-list">
+        <template is="movieTemplate" data="{{...movie}}" />
+      </view>
+    </block>
+  </scroll-view>
+</template>

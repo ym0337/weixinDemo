@@ -1,0 +1,21 @@
+<template name='starsTemplate'>
+
+  <view class='stars-container'>
+    <view class='stars'>
+      <!--这里stars是一个数组,i是里面的每一个数  -->
+      <block wx:for="{{stars}}" wx:for-item="i">
+        <image src="{{i==1?'/images/icon/starsOn.png':'/images/icon/starsOff.png'}}"></image>
+        <!-- 假如有半颗星的情况,数据可以用[1,1,2,0,0]来替代,2是半颗星的情况
+        <image wx:if="{{i==1}}" src="/images/icon/starsOn.png"></image>
+        <image wx:else if="{{i==2}}" src="/images/icon/starsOff.png"></image>
+        <image wx:else src="/images/icon/starsOff.png"></image> -->
+      </block>
+      <!-- <image src="/images/icon/starsOn.png"></image>
+      <image src="/images/icon/starsOff.png"></image>
+      <image src="/images/icon/starsOff.png"></image>
+      <image src="/images/icon/starsOff.png"></image>
+      <image src="/images/icon/starsOff.png"></image> -->
+    </view>
+    <text class='stars-score'>{{score}}</text>
+  </view>
+</template>>

@@ -1,0 +1,12 @@
+@import '../movie/movie-template.wxss';
+
+.grid-container {
+  margin: 20rpx 0 20rpx 26rpx;
+  /*scroll-view标签必须指定一个高度,官方文档有说明  */
+  height:1300rpx;
+}
+
+.singe-list {
+  float: left;
+  margin-bottom:20rpx;
+}

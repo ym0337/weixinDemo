@@ -1,0 +1,18 @@
+<import src="movie-list/movie-list-template.wxml" />
+<import src="movie-grid/movie-grid-template.wxml" />
+
+<view class="search">
+  <icon class="search-img" type="search" size="20" />
+  <input tpye="text" placeholder="这是一个可以自动聚焦的input" class="placeholder" bindfocus="onBindFocus" bindblur="onBindBlur" />
+  <icon class="search-img" type="clear" size="20" catch:tap="onClearSearch" wx:if="{{searchPanelShow}}" />
+</view>
+<view wx:if="{{containerShow}}">
+  <!--...是展开属性,调用的时候不用写前面  -->
+  <template is="movieListTemplate" data="{{...inTheaters}}" />
+  <template is="movieListTemplate" data="{{...comingSoon}}" />
+  <template is="movieListTemplate" data="{{...top250}}" />
+</view>
+
+<view class="search-panel" wx:if="{{searchPanelShow}}">
+    <template is="movieGridTemplate" data="{{...searchResult}}" />
+</view>

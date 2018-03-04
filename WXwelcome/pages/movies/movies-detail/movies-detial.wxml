@@ -1,0 +1,13 @@
+<import src="../stars/stars-template.wxml" />
+<!--传入data数据{{movies}}  -->
+<view class="container">
+  <image class="head-img" src="{{movies.image}}" mode="aspectFill"></image>
+  <view>
+    <text>{{movies.title}}</text>
+    <text>{{movies.countries+"·"+movies.year}}</text>
+  </view>
+  <view>
+    <text>主演: {{movies.casts}}</text>
+  </view>
+  <template is="starsTemplate" data="{{stars:movies.rating.stars,score:movies.rating.average}}" />
+</view>

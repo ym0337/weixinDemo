@@ -1,0 +1,87 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.audioPlaying{
+  width:100rpx;
+  height:100rpx;
+  border:10rpx solid rgba(255,0,255,0.5);
+  border-radius:50%;
+  background:rgba(255,100,100,0.3);
+  position:absolute;
+  top:221rpx;
+  left:321rpx;
+  text-align:center;
+  line-height:100rpx;
+}
+.audioPause{
+  width:120rpx;
+  height:100rpx;
+  border:10rpx solid rgba(0,225,255,0.5);
+  background:rgba(100,100,255,0.3);
+  position:absolute;
+  top:221rpx;
+  left:311rpx;
+  text-align:center;
+  line-height:100rpx;
+}
+.post-detail-img {
+  width: 100%;
+  height: 502rpx;
+}
+.post-detail-name text
+{
+  margin:10rpx;
+}
+.post-detail-author {
+  vertical-align:middle;
+  width: 60rpx;
+  height: 60rpx;
+}
+.post-detail-title{
+  margin-left:60rpx;
+  font-size:36rpx;
+}
+.post-detail-icon {
+  text-align: center;
+  line-height: 64rpx;
+  overflow: hidden;
+  position: relative;
+}
+
+.collection-icon1 {
+  margin-right: 50rpx;
+  float: right;
+  width: 64rpx;
+  height: 64rpx;
+  background: #993364;
+  border-radius: 50%;
+}
+.collection-icon2 {
+  margin-right: 50rpx;
+  float: right;
+  width: 64rpx;
+  height: 64rpx;
+  background: #ccc;
+  border-radius: 50%;
+}
+
+.share-icon {
+  margin-right: 20rpx;
+  float: right;
+  width: 64rpx;
+  height: 64rpx;
+  background: #147896;
+  border-radius: 50%;
+}
+
+.middle-line {
+  width: 650rpx;
+  height: 2rpx;
+  background: #ccc;
+  position: absolute;
+  top: 32rpx;
+  left: 50rpx;
+  z-index: -99;
+}

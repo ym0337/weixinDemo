@@ -1,0 +1,3 @@
+<import src="../movie-grid/movie-grid-template.wxml" />
+<!--传入data数据{{movies}}  -->
+<template is="movieGridTemplate"  data="{{movies}}"/>
