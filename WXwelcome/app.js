@@ -5,6 +5,7 @@ App({
     g_musicIsPlaying: false,
     // 记录正在播放的是哪一首歌
     g_musicCurrentId: null,
-    doubanBase: 'https://api.douban.com/'
+    // doubanBase: 'https://api.douban.com/'
+    doubanBase: 'http://t.yushu.im'
   }
 })
